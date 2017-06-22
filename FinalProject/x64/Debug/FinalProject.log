@@ -1,0 +1,4 @@
+﻿  Source.cpp
+Source.obj : error LNK2019: unresolved external symbol "public: __cdecl Graphics::Graphics(unsigned long)" (??0Graphics@@QEAA@K@Z) referenced in function main
+Source.obj : error LNK2019: unresolved external symbol "public: void __cdecl Graphics::write(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?write@Graphics@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function main
+C:\Users\ssd\Desktop\FinalProject\x64\Debug\FinalProject.exe : fatal error LNK1120: 2 unresolved externals

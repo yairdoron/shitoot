@@ -30,7 +30,6 @@ public:
 	static Control* getFocus() { return NULL; };
 	static void setFocus(Control& control) {};
 	
-	
 
 	void draw(Graphics& g, int x, int y, size_t layer) const;   //  V
 
@@ -49,8 +48,6 @@ public:
 
 	virtual int getHeight() const;
 	virtual void setHeight(int height);
-
-
 	
 	virtual size_t getLayer();
 	

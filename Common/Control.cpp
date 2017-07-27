@@ -5,7 +5,7 @@
 Control::Control(int height, int width) :
 
 	top(1),
-	left(1),
+	left(2),
 	layer(0),
 	_width(width),
 	_height(height),

@@ -32,6 +32,15 @@ bool Control::canGetFocus() const
 	return _canGetFocus;
 }
 
+void Control::setCanGetFocus(bool canGetFocus)
+{
+	_canGetFocus = canGetFocus;
+}
+void Control::setFocus(Control &control)
+{
+	_focus = &control;
+}
+
 int Control::getLeft() const
 {
 	return left;

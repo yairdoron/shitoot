@@ -29,9 +29,7 @@ protected:
 
 public:
 
-	static Control* getFocus();
-	static void setFocus(Control& control) {};
-	virtual bool canGetFocus() const;
+
 
 	void draw(Graphics& g, int x, int y, size_t layer) const;   //  V
 
@@ -63,6 +61,12 @@ public:
 
 	virtual void setBorder(BorderType border);	// the sons will set it up
 	virtual void setLayer(size_t layer);
+
+	static Control* getFocus();
+	static void setFocus(Control& control);
+	virtual bool canGetFocus() const;
+	virtual void setCanGetFocus(bool canGetFocus); // TODO: set to protected
+
 	
 };
 

@@ -14,9 +14,9 @@ void main()
 	
 	//g.write("hello");
 
-	//TextBox FirstTextBox(40);
-	//FirstTextBox.SetText("My Text box");
-	//FirstTextBox.setBorder(BorderType::Single);
+	TextBox FirstTextBox(40);
+	FirstTextBox.SetText("My Text box");
+	FirstTextBox.setBorder(BorderType::Single);
 
 
 	Label FirstLabel(10);

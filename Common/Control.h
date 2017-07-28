@@ -19,6 +19,8 @@ private:
 	BorderType _border;
 	Color _background;
 	Color _foreground;
+	static Control* _focus;
+	bool _canGetFocus;
 	
 protected:
 
@@ -27,9 +29,9 @@ protected:
 
 public:
 
-	static Control* getFocus() { return NULL; };
+	static Control* getFocus();
 	static void setFocus(Control& control) {};
-	
+	virtual bool canGetFocus() const;
 
 	void draw(Graphics& g, int x, int y, size_t layer) const;   //  V
 

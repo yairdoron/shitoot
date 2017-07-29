@@ -12,34 +12,15 @@ Control::Control(int height, int width) :
 	_border(BorderType::None),
 	_background(Color::Black),
 	_foreground(Color::White)
-	
+
 	{
 	
 	}
 
-Control* Control::_focus = nullptr;
+
 
 ////////my adds/////////
 
-Control* Control::getFocus()
-{
-	return _focus;
-}
-
-bool Control::canGetFocus() const
-{
-	
-	return _canGetFocus;
-}
-
-void Control::setCanGetFocus(bool canGetFocus)
-{
-	_canGetFocus = canGetFocus;
-}
-void Control::setFocus(Control &control)
-{
-	_focus = &control;
-}
 
 int Control::getLeft() const
 {

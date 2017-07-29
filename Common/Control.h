@@ -13,12 +13,12 @@ private:
 
 	int left;
 	int top;
-	size_t layer;
+	unsigned int layer;
 	int _width;
 	int _height;
 	BorderType _border;
-	Color _background;
-	Color _foreground;
+	Color background;
+	Color foreground;
 	
 protected:
 
@@ -32,7 +32,7 @@ public:
 	
 	
 
-	void draw(Graphics& g, int x, int y, size_t layer) const;   //  V
+	void draw(Graphics& g, int x, int y, unsigned int layer) const;   //  V
 
 	virtual void mousePressed(int x, int y, bool isLeft) {};
 	virtual void keyDown(int keyCode, char charecter) {};
@@ -52,18 +52,22 @@ public:
 
 
 	
-	virtual size_t getLayer();
+	virtual unsigned int getLayer() const;
 	
 
 	virtual void getAllControls(vector<Control*>* controls) {};
-	virtual bool canGetFocus() { return FALSE; };
+	virtual bool canGetFocus() { return false; };
 
+	virtual Color getForeground() const;
+	virtual void setForeground(Color color);
 
+	virtual Color getBackground() const;
+	virtual void setBackground(Color color);
 
 	////////my adds//////////
 
 	virtual void setBorder(BorderType border);	// the sons will set it up
-	virtual void setLayer(size_t layer);
+	virtual void setLayer(unsigned int layer);
 	
 };
 

@@ -1,2 +1,18 @@
-﻿  Label.cpp
-  Common.vcxproj -> C:\Users\ssd\Desktop\FinalProject\Debug\Common.lib
+﻿  TextBox.cpp
+c:\users\ssd\desktop\finalproject\common\textbox.cpp(5): error C2512: 'Control': no appropriate default constructor available
+  c:\users\ssd\desktop\finalproject\common\control.h(10): note: see declaration of 'Control'
+c:\users\ssd\desktop\finalproject\common\textbox.cpp(5): error C2614: 'TextBox': illegal member initialization: 'Label' is not a base or member
+c:\users\ssd\desktop\finalproject\common\textbox.cpp(10): error C2509: 'draw': member function not declared in 'TextBox'
+  c:\users\ssd\desktop\finalproject\common\textbox.h(12): note: see declaration of 'TextBox'
+c:\users\ssd\desktop\finalproject\common\textbox.cpp(27): error C2509: 'mousePressed': member function not declared in 'TextBox'
+  c:\users\ssd\desktop\finalproject\common\textbox.h(12): note: see declaration of 'TextBox'
+c:\users\ssd\desktop\finalproject\common\textbox.cpp(42): error C2509: 'keyDown': member function not declared in 'TextBox'
+  c:\users\ssd\desktop\finalproject\common\textbox.h(12): note: see declaration of 'TextBox'
+  ComboBox.cpp
+c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
+  Button.cpp
+c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
+c:\users\ssd\desktop\finalproject\common\button.cpp(14): error C2660: 'MouseListener::mousePressed': function does not take 4 arguments
+  NumericBox.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\NumericBox.cpp': No such file or directory
+  Generating Code...

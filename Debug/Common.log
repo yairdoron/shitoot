@@ -1,10 +1,2 @@
-﻿  Label.cpp
-  Control.cpp
-  Generating Code...
-  Compiling...
-  TextBox.cpp
-  EventEngine.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Panel.cpp
+﻿  TextBox.cpp
   Common.vcxproj -> C:\Users\ssd\Desktop\FinalProject\Debug\Common.lib

@@ -10,36 +10,31 @@ Control::Control(int height, int width) :
 	_width(width),
 	_height(height),
 	_border(BorderType::None),
-	_background(Color::Black),
-	_foreground(Color::White)
-	
+	background(Color::Black),
+	foreground(Color::White),
+	_visible(true),
+	_canGetFocus(false)
 	{
 	
 	}
 
-Control* Control::_focus = nullptr;
 
-////////my adds/////////
-
-Control* Control::getFocus()
+bool Control::isVisible() const
 {
-	return _focus;
+	return _visible;
 }
+
 
 bool Control::canGetFocus() const
 {
-	
-	return _canGetFocus;
+	return _canGetFocus && isVisible();
 }
 
 void Control::setCanGetFocus(bool canGetFocus)
 {
 	_canGetFocus = canGetFocus;
 }
-void Control::setFocus(Control &control)
-{
-	_focus = &control;
-}
+
 
 int Control::getLeft() const
 {
@@ -81,12 +76,12 @@ void Control::setHeight(int height)
 	_height = height;
 }
 
-size_t Control::getLayer() 
+unsigned int Control::getLayer() const
 {
 	return layer;
 }
 
-void Control::setLayer(size_t layerr)
+void Control::setLayer(unsigned int layerr)
 {
 	layer = layerr;
 }
@@ -97,15 +92,32 @@ void Control::setBorder(BorderType border)
 	_border = border;
 }
 
+Color Control::getForeground() const
+{
+	return foreground;
+}
+
+void Control::setForeground(Color color)
+{
+	foreground = color;
+}
+Color Control::getBackground() const
+{
+	return background;
+}
+
+void Control::setBackground(Color color)
+{
+	background = color;
+}
 
 
-
-void Control::draw(Graphics & g, int left, int top, size_t layer) const
+void Control::draw(Graphics & g, int left, int top, unsigned int layer) const
 {
 	
 
-	g.setBackground(_background);
-	g.setForeground(_foreground);
+	g.setBackground(background);
+	g.setForeground(foreground);
 
 	const BorderDrawer& borderDrawer = SimpleBorderFactory::instance().getBorderDrawer(_border);
 	borderDrawer.draw(g, getLeft() + left, getTop() + top, getWidth(), getHeight());   ///  we define the write of the border

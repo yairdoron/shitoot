@@ -1,13 +1,26 @@
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.pdb
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.idb
-d:\documents\visual studio 2015\projects\finalproject\common\debug\graphics.obj
-d:\documents\visual studio 2015\projects\finalproject\common\debug\control.obj
-d:\documents\visual studio 2015\projects\finalproject\common\debug\eventengine.obj
-d:\documents\visual studio 2015\projects\finalproject\debug\common.lib
-d:\documents\visual studio 2015\projects\finalproject\debug\common.pdb
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.tlog\cl.command.1.tlog
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.tlog\cl.read.1.tlog
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.tlog\cl.write.1.tlog
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.tlog\lib-link.read.1.tlog
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.tlog\lib-link.write.1.tlog
-d:\documents\visual studio 2015\projects\finalproject\common\debug\common.tlog\lib.command.1.tlog
+c:\users\ssd\desktop\finalproject\common\debug\common.pdb
+c:\users\ssd\desktop\finalproject\common\debug\common.idb
+c:\users\ssd\desktop\finalproject\common\debug\control.obj
+c:\users\ssd\desktop\finalproject\common\debug\eventengine.obj
+c:\users\ssd\desktop\finalproject\common\debug\graphics.obj
+c:\users\ssd\desktop\finalproject\common\debug\panel.obj
+c:\users\ssd\desktop\finalproject\common\debug\textbox.obj
+c:\users\ssd\desktop\finalproject\common\debug\singleborderdrawer.obj
+c:\users\ssd\desktop\finalproject\common\debug\label.obj
+c:\users\ssd\desktop\finalproject\debug\common.lib
+c:\users\alisa\source\repos\shitoot\common\debug\control.obj
+c:\users\alisa\source\repos\shitoot\common\debug\eventengine.obj
+c:\users\alisa\source\repos\shitoot\common\debug\graphics.obj
+c:\users\alisa\source\repos\shitoot\common\debug\label.obj
+c:\users\alisa\source\repos\shitoot\common\debug\panel.obj
+c:\users\alisa\source\repos\shitoot\common\debug\singleborderdrawer.obj
+c:\users\alisa\source\repos\shitoot\common\debug\common.idb
+c:\users\alisa\source\repos\shitoot\common\debug\common.pdb
+c:\users\alisa\source\repos\shitoot\debug\common.pdb
+c:\users\alisa\source\repos\shitoot\debug\common.lib
+c:\users\alisa\source\repos\shitoot\common\debug\common.tlog\cl.command.1.tlog
+c:\users\alisa\source\repos\shitoot\common\debug\common.tlog\cl.read.1.tlog
+c:\users\alisa\source\repos\shitoot\common\debug\common.tlog\cl.write.1.tlog
+c:\users\alisa\source\repos\shitoot\common\debug\common.tlog\lib-link.read.1.tlog
+c:\users\alisa\source\repos\shitoot\common\debug\common.tlog\lib-link.write.1.tlog
+c:\users\alisa\source\repos\shitoot\common\debug\common.tlog\lib.command.1.tlog

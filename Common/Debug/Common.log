@@ -1,20 +1,43 @@
-﻿  main.cpp
-c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
-  TextBox.cpp
-c:\users\ssd\desktop\finalproject\common\textbox.cpp(5): error C2512: 'Control': no appropriate default constructor available
-  c:\users\ssd\desktop\finalproject\common\control.h(10): note: see declaration of 'Control'
-c:\users\ssd\desktop\finalproject\common\textbox.cpp(5): error C2614: 'TextBox': illegal member initialization: 'Label' is not a base or member
-c:\users\ssd\desktop\finalproject\common\textbox.cpp(10): error C2509: 'draw': member function not declared in 'TextBox'
-  c:\users\ssd\desktop\finalproject\common\textbox.h(13): note: see declaration of 'TextBox'
-c:\users\ssd\desktop\finalproject\common\textbox.cpp(27): error C2509: 'mousePressed': member function not declared in 'TextBox'
-  c:\users\ssd\desktop\finalproject\common\textbox.h(13): note: see declaration of 'TextBox'
-c:\users\ssd\desktop\finalproject\common\textbox.cpp(42): error C2509: 'keyDown': member function not declared in 'TextBox'
-  c:\users\ssd\desktop\finalproject\common\textbox.h(13): note: see declaration of 'TextBox'
+﻿  TextBox.cpp
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(38): warning C4018: '>=': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(73): warning C4018: '<=': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(85): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(94): error C2275: 'std::string': illegal use of this type as an expression
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2634): note: see declaration of 'std::string'
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(94): error C2146: syntax error: missing ')' before identifier 'updated'
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(97): error C2065: 'updated': undeclared identifier
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(101): error C2065: 'updated': undeclared identifier
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(104): error C2065: 'updated': undeclared identifier
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(80): error C2044: illegal continue
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(111): error C2059: syntax error: '}'
+c:\users\alisa\source\repos\shitoot\common\textbox.cpp(111): error C2143: syntax error: missing ';' before '}'
+  SingleBorderDrawer.cpp
+c:\users\alisa\source\repos\shitoot\common\singleborderdrawer.cpp(5): warning C4309: '=': truncation of constant value
+c:\users\alisa\source\repos\shitoot\common\singleborderdrawer.cpp(6): warning C4309: '=': truncation of constant value
+c:\users\alisa\source\repos\shitoot\common\singleborderdrawer.cpp(7): warning C4309: '=': truncation of constant value
+c:\users\alisa\source\repos\shitoot\common\singleborderdrawer.cpp(8): warning C4309: '=': truncation of constant value
+c:\users\alisa\source\repos\shitoot\common\singleborderdrawer.cpp(9): warning C4309: '=': truncation of constant value
+c:\users\alisa\source\repos\shitoot\common\singleborderdrawer.cpp(10): warning C4309: '=': truncation of constant value
+  Panel.cpp
+c:\users\alisa\source\repos\shitoot\common\panel.cpp(11): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\panel.cpp(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\panel.cpp(34): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\panel.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\panel.cpp(60): warning C4018: '<': signed/unsigned mismatch
+c:\users\alisa\source\repos\shitoot\common\panel.cpp(68): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+c:\users\alisa\source\repos\shitoot\common\button.h(9): error C2061: syntax error: identifier 'Button'
+  Label.cpp
+  Graphics.cpp
+c:\users\alisa\source\repos\shitoot\common\graphics.cpp(97): warning C4244: 'argument': conversion from 'DWORD' to 'WORD', possible loss of data
+  EventEngine.cpp
+  Control.cpp
   ComboBox.cpp
-c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
+c:\users\alisa\source\repos\shitoot\common\button.h(9): error C2061: syntax error: identifier 'Button'
   Button.cpp
-c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
-c:\users\ssd\desktop\finalproject\common\button.cpp(14): error C2660: 'MouseListener::mousePressed': function does not take 4 arguments
+c:\users\alisa\source\repos\shitoot\common\button.h(9): error C2061: syntax error: identifier 'Button'
+c:\users\alisa\source\repos\shitoot\common\button.cpp(14): error C2660: 'MouseListener::mousePressed': function does not take 4 arguments
   NumericBox.cpp
 c1xx : fatal error C1083: Cannot open source file: '..\NumericBox.cpp': No such file or directory
   Generating Code...

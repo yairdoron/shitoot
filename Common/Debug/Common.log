@@ -1,13 +1,15 @@
-﻿  TextBox.cpp
+﻿  main.cpp
+c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
+  TextBox.cpp
 c:\users\ssd\desktop\finalproject\common\textbox.cpp(5): error C2512: 'Control': no appropriate default constructor available
   c:\users\ssd\desktop\finalproject\common\control.h(10): note: see declaration of 'Control'
 c:\users\ssd\desktop\finalproject\common\textbox.cpp(5): error C2614: 'TextBox': illegal member initialization: 'Label' is not a base or member
 c:\users\ssd\desktop\finalproject\common\textbox.cpp(10): error C2509: 'draw': member function not declared in 'TextBox'
-  c:\users\ssd\desktop\finalproject\common\textbox.h(12): note: see declaration of 'TextBox'
+  c:\users\ssd\desktop\finalproject\common\textbox.h(13): note: see declaration of 'TextBox'
 c:\users\ssd\desktop\finalproject\common\textbox.cpp(27): error C2509: 'mousePressed': member function not declared in 'TextBox'
-  c:\users\ssd\desktop\finalproject\common\textbox.h(12): note: see declaration of 'TextBox'
+  c:\users\ssd\desktop\finalproject\common\textbox.h(13): note: see declaration of 'TextBox'
 c:\users\ssd\desktop\finalproject\common\textbox.cpp(42): error C2509: 'keyDown': member function not declared in 'TextBox'
-  c:\users\ssd\desktop\finalproject\common\textbox.h(12): note: see declaration of 'TextBox'
+  c:\users\ssd\desktop\finalproject\common\textbox.h(13): note: see declaration of 'TextBox'
   ComboBox.cpp
 c:\users\ssd\desktop\finalproject\common\button.h(9): error C2061: syntax error: identifier 'Button'
   Button.cpp

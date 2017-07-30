@@ -4,6 +4,7 @@
 #include <string>
 #include <Windows.h>
 #include "Control.h"
+#include "Label.h"
 
 using namespace std;
 

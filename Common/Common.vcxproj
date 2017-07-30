@@ -110,7 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\NumericBox.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="ComboBox.cpp" />
     <ClCompile Include="Control.cpp" />
@@ -118,12 +117,12 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NumericBox.cpp" />
     <ClCompile Include="Panel.cpp" />
     <ClCompile Include="SingleBorderDrawer.cpp" />
     <ClCompile Include="TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\NumericBox.h" />
     <ClInclude Include="BorderDrawer.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="ComboBox.h" />
@@ -131,6 +130,7 @@
     <ClInclude Include="EventEngine.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Label.h" />
+    <ClInclude Include="NumericBox.h" />
     <ClInclude Include="Panel.h" />
     <ClInclude Include="SimpleBorderFactory.h" />
     <ClInclude Include="SingleBorderDrawer.h" />

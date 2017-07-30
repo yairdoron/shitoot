@@ -1,12 +1,12 @@
 #include "NumericBox.h"
 
-
+struct NumericBoxUpdateListener;
 
 NumericBox::NumericBox(int width, int min, int max) : Panel(1, width), _buttonMinus(1), _label(width - 2), _buttonPlus(1),
 	_val(min), _min(min), _max(max)
 {
 
-	auto updateListener = new NumericBoxUpdateListener(*this);
+	NumericBoxUpdateListener* updateListener = new NumericBoxUpdateListener(*this);
 
 	_buttonMinus.setText("-");
 	_buttonPlus.setText("+");
@@ -86,7 +86,7 @@ void NumericBox::addControl(Control & control, int left, int top)
 
 void NumericBox::setLayer(size_t layer)
 {
-	for (auto c : _controls)
+	for (auto c : controls)
 	{
 		c->setLayer(layer);
 	}

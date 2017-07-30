@@ -91,6 +91,8 @@ void TextBox::keyDown(int keyCode, char character)
 	}
 	else if(character != '\0')
 	{
+
+
 		string updated;
 		if (curCursorPos < getText().size())
 		{
@@ -107,5 +109,6 @@ void TextBox::keyDown(int keyCode, char character)
 		{
 			++_cursorPosition;
 		}
+		
 	}
 }

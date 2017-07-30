@@ -1,8 +1,12 @@
 
 #include <string>
 #include "Panel.h"
+#include "Button.h"
+#include "Panel.h"
 
-class NumericBox
+struct NumericBoxUpdateListener;
+
+class NumericBox : Panel
 {
 private:
 	int _val;

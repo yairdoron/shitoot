@@ -4,7 +4,6 @@
 #include "Button.h"
 #include "Panel.h"
 
-struct NumericBoxUpdateListener;
 
 class NumericBox : Panel
 {

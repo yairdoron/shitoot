@@ -1,32 +1,31 @@
 #include "NumericBox.h"
 #include "Button.h"
 
+
 struct NumericBoxUpdateListener : public MouseListener
 {
 
+		NumericBoxUpdateListener(NumericBox &box) : myBox(box)
+		{}
+
+		void mousePressed(Button &button, int x, int y, bool isLeft)
+		{
+
+			std::string buttonText = button.getText();
+			int value = myBox.getParam();
+			if (buttonText == "-")
+			{
+				value--;
+			}
+			if (buttonText == "+")
+			{
+				value++;
+			}
+			myBox.setParam(value);
+
+		}
 private:
 	NumericBox &myBox;
-
-public:
-	NumericBoxUpdateListener(NumericBox &box) : myBox(box)
-	{}
-
-	void mousePressed(Button &button, int x, int y, bool isLeft)
-	{
-
-		std::string buttonText = button.getText();
-		int value = myBox.getParam();
-		if (buttonText == "-")
-		{
-			value--;
-		}
-		if (buttonText == "+")
-		{
-			value++;
-		}
-		myBox.setParam(value);
-
-	}
 };
 
 NumericBox::NumericBox(int width, int min, int max) : Panel(1, width), _buttonMinus(1), _label(width - 2), _buttonPlus(1),
@@ -75,7 +74,6 @@ int NumericBox::getMax() const
 {
 	return _max;
 }
-
 
 void NumericBox::addControl(Control & control, int left, int top)
 {

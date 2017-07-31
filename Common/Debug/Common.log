@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
-=======
-﻿  NumericBox.cpp
-c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(9): error C2027: use of undefined type 'NumericBoxUpdateListener'
-  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(3): note: see declaration of 'NumericBoxUpdateListener'
-  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(3): note: see declaration of 'NumericBoxUpdateListener'
-c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(13): error C2664: 'void Button::addListener(MouseListener &)': cannot convert argument 1 from 'NumericBoxUpdateListener' to 'MouseListener &'
-c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(14): error C2664: 'void Button::addListener(MouseListener &)': cannot convert argument 1 from 'NumericBoxUpdateListener' to 'MouseListener &'
->>>>>>> 2accae011479e1ec3b7ef488a640f827605ab686
+
+c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): error C2259: 'NumericBoxUpdateListener': cannot instantiate abstract class
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): note: due to following members:
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): note: 'void MouseListener::mousePressed(Button &,int,int,bool)': is abstract
+  c:\users\alisa\source\repos\shitoot\common\button.h(11): note: see declaration of 'MouseListener::mousePressed'
+c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): error C2664: 'NumericBoxUpdateListener::NumericBoxUpdateListener(NumericBoxUpdateListener &&)': cannot convert argument 1 from 'NumericBox' to 'const NumericBoxUpdateListener &'
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): note: Reason: cannot convert from 'NumericBox' to 'const NumericBoxUpdateListener'
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(54): error C2011: 'NumericBoxUpdateListener': 'struct' type redefinition
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(4): note: see declaration of 'NumericBoxUpdateListener'

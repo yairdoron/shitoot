@@ -9,6 +9,8 @@
 #include "NumericBox.h"
 #include "ComboBox.h"
 #include "MessageBox.h"
+#include "CheckList.h"
+#include <vector>
 
 using namespace std;
 
@@ -23,9 +25,11 @@ private:
 	Control &_c;
 };
 
+
+
+
 int main()
 {
-
 
 	Label Label1(20);
 	Label1.setText("Name: ");
@@ -39,11 +43,16 @@ int main()
 
 	Panel main(50, 60);
 
+	vector<string> options;
+	options.push_back("100");
+	int x = 60;
 
+	CheckList checklist(x, x, options);
 
 	main.addControl(Label1, 3, 2);
 
 	main.addControl(TextB, 25, 2);
+
 
 	Button b(10);
 	b.setText("submit");
@@ -51,6 +60,9 @@ int main()
 
 	b.addListener(l);
 	main.addControl(b, 25, 5);
+
+	main.addControl(TextB2, 25, 5);
+	main.addControl(checklist, 60, 30);
 
 	EventEngine engine;
 
@@ -63,5 +75,5 @@ int main()
 	//main.setForeground(Color::White);
 	//main.addControl(b2, 1, 5);
 	engine.run(main);
-	return 0;
+	return 1;
 }

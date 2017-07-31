@@ -8,7 +8,7 @@ class Button;
 
 struct MouseListener {
 		//pure virtual struct method
-		virtual void mousePressed(Button &button, int x, int y, bool left) = 0;
+		virtual void mousePressed(Button &button, int x, int y, bool isLeft) = 0;
 	
 };
 

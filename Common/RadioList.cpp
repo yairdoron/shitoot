@@ -49,7 +49,7 @@ void RadioList::deselectIndex(size_t index)
 
 void RadioList::setLayer(size_t layer)
 {
-	for (auto c : _controls)
+	for (auto c : controls)
 	{
 		c->setLayer(layer);
 	}

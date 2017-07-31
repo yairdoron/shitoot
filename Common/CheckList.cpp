@@ -5,28 +5,11 @@
 #include "CheckList.h"
 
 using namespace std;
-struct UpdateListener : public MouseListener
+
+
+CheckList::CheckList(int height, int width, vector<string> options):Panel(height, width), _options(options),
+_selectedIndices(), _listIndex(0)
 {
-	UpdateListener(CheckList &box, size_t index) : _box(box), _index(index)
-	{}
-
-	void mousePressed(Button &b, int x, int y, bool isLeft)
-	{
-		_box.alterSelectedIndex(_index);
-	}
-
-private:
-	CheckList &_box;
-	size_t _index;
-};
-
-CheckList::CheckList(int height, int width, vector<string> options):Panel(height, width)
-
-{
-	
-	 _options(options)
-	 _pressedCubes();
-	 _listIndex(0);
 	
 
 	for (int i = 0; i < options.size(); i++)
@@ -41,9 +24,9 @@ CheckList::CheckList(int height, int width, vector<string> options):Panel(height
 	setCanGetFocus(true);
 }
 
-vector<size_t> CheckList::getPressedCubes() const
+vector<size_t> CheckList::getSelectedIndices() const
 {
-	return _pressedCubes;
+	return _selectedIndices;
 }
 
 void CheckList::selectIndex(size_t index)
@@ -54,10 +37,10 @@ void CheckList::selectIndex(size_t index)
 	}
 
 
-	if (find(_pressedCubes.begin(), _pressedCubes.end(), index) == _pressedCubes.end())
+	if (find(_selectedIndices.begin(), _selectedIndices.end(), index) == _selectedIndices.end())
 	{
-		_pressedCubes.push_back(index);
-		auto newSelectedBtn = (reinterpret_cast<Button*>(_controls[index]));
+		_selectedIndices.push_back(index);
+		auto newSelectedBtn = (reinterpret_cast<Button*>(controls[index]));
 		newSelectedBtn->setText("[*] " + _options[index]);
 	}
 }
@@ -69,11 +52,11 @@ void CheckList::deselectIndex(size_t index)
 		throw "invalid index";
 	}
 
-	auto selectedIndex = find(_pressedCubes.begin(), _pressedCubes.end(), index);
-	if (selectedIndex != _pressedCubes.end())
+	auto selectedIndex = find(_selectedIndices.begin(), _selectedIndices.end(), index);
+	if (selectedIndex != _selectedIndices.end())
 	{
-		_pressedCubes.erase(selectedIndex);
-		auto newDeselectedBtn = (reinterpret_cast<Button*>(_controls[index]));
+		_selectedIndices.erase(selectedIndex);
+		auto newDeselectedBtn = (reinterpret_cast<Button*>(controls[index]));
 		newDeselectedBtn->setText("[ ] " + _options[index]);
 	}
 }
@@ -85,7 +68,7 @@ void CheckList::addControl(Control & control, int left, int top)
 
 void CheckList::alterSelectedIndex(size_t index)
 {
-	if (find(_pressedCubes.begin(), _pressedCubes.end(), index) == _pressedCubes.end())
+	if (find(_selectedIndices.begin(), _selectedIndices.end(), index) == _selectedIndices.end())
 	{
 		selectIndex(index);
 	}
@@ -106,8 +89,8 @@ void CheckList::mousePressed(int x, int y, bool isLeft)
 
 	if (this != Control::getFocus())
 	{
-		_controls[_listIndex]->setBackground(getBackground());
-		_controls[_listIndex]->setForeground(getForeground());
+		controls[_listIndex]->setBackground(getBackground());
+		controls[_listIndex]->setForeground(getForeground());
 	}
 }
 
@@ -139,27 +122,37 @@ void CheckList::keyDown(int keyCode, char character)
 		return;
 	}
 
-	_controls[_listIndex]->setBackground(getBackground());
-	_controls[_listIndex]->setForeground(getForeground());
+	controls[_listIndex]->setBackground(getBackground());
+	controls[_listIndex]->setForeground(getForeground());
 
 	if ((change == -1) && (_listIndex == 0))
 	{
-		_listIndex = _controls.size() - 1;
+		_listIndex = controls.size() - 1;
 	}
 	else
 	{
-		_listIndex = (_listIndex + change) % _controls.size();
+		_listIndex = (_listIndex + change) % controls.size();
 	}
 
-	_controls[_listIndex]->setBackground(getForeground());
-	_controls[_listIndex]->setForeground(getBackground());
+	controls[_listIndex]->setBackground(getForeground());
+	controls[_listIndex]->setForeground(getBackground());
 }
 
 void CheckList::setLayer(size_t layer)
 {
-	for (auto c : _controls)
+	for (auto c : controls)
 	{
 		c->setLayer(layer);
 	}
 	Panel::setLayer(layer);
 }
+
+UpdateListener::UpdateListener(CheckList &box, size_t index) : _box(box), _index(index)
+{}
+
+
+void UpdateListener::mousePressed(Button &b, int x, int y, bool isLeft)
+{
+	_box.alterSelectedIndex(_index);
+}
+

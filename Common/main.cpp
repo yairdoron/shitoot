@@ -8,6 +8,7 @@
 #include "Panel.h"
 #include "NumericBox.h"
 #include "ComboBox.h"
+#include "RadioList.h"
 #include "CheckList.h"
 #include <vector>
 
@@ -30,15 +31,14 @@ int main()
 
 	vector<string> options;
 	options.push_back("100");
-	int x = 60;
+	CheckList checklist(60, 60, options);
 
-	CheckList checklist(x, x, options);
 
 	main.addControl(Label1, 3, 2);
 
 	main.addControl(TextB, 25, 2);
 	main.addControl(TextB2, 25, 5);
-	main.addControl(checklist, 60, 30);
+	main.addControl(checklist, 60, 10);
 	EventEngine engine;
 
 	main.setBackground(Color::Purple);

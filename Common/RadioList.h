@@ -1,4 +1,4 @@
-#pragma once
+
 
 #include <string>
 
@@ -18,7 +18,7 @@ public:
 
 	virtual void setLayer(size_t layer);
 
-protected:
+//protected:
 	virtual vector<size_t> getSelectedIndices() const;
 	virtual void selectIndex(size_t index);
 	virtual void deselectIndex(size_t index);

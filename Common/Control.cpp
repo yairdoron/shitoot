@@ -43,7 +43,7 @@ int Control::getLeft() const
 
 void Control::setLeft(int left)
 {
-	left = left;
+	Control::left = left;
 }
 
 int Control::getTop() const
@@ -53,7 +53,7 @@ int Control::getTop() const
 
 void Control::setTop(int top)
 {
-	top = top;
+	Control::top = top;
 }
 
 int Control::getWidth() const
@@ -112,7 +112,7 @@ void Control::setBackground(Color color)
 }
 
 
-void Control::draw(Graphics & g, int left, int top, unsigned int layer) const
+void Control::draw(Graphics & g, int left, int top, size_t layer) const
 {
 	
 

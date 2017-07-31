@@ -84,11 +84,7 @@ void NumericBox::addControl(Control & control, int left, int top)
 
 void NumericBox::setLayer(size_t layer)
 {
-	for (auto c : controls)
-	{
-		c->setLayer(layer);
-	}
-	Panel::setLayer(layer);
+
 }
 
 

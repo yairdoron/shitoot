@@ -34,7 +34,7 @@ public:
 	
 	
 
-	void draw(Graphics& g, int x, int y, unsigned int layer) const;   //  V
+	virtual void draw(Graphics& g, int x, int y, size_t layer) const;   //  V
 
 	virtual void mousePressed(int x, int y, bool isLeft) {};
 	virtual void keyDown(int keyCode, char charecter) {};
@@ -74,7 +74,7 @@ public:
 	virtual void setBorder(BorderType border);	// the sons will set it up
 	virtual void setLayer(unsigned int layer);
 
-	virtual void show();
+	virtual void  show();
 	virtual void hide();
 	
 };

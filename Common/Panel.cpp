@@ -13,13 +13,13 @@ if (other_control_list != nullptr)
 	
 		}
 
-void Panel::draw(Graphics & g, int left, int top, unsigned int layer) const
+void Panel::draw(Graphics & g, int left, int top,  size_t layer) const
  {
 	if (layer >= getLayer())
 	for (int i = 0; i<controls.size(); i++) controls[i]->draw(g, left + getLeft(), top + getTop(), layer);
 	
 		Control::draw(g, left, top, layer);
-	}
+}
 
 void Panel::mousePressed(int x, int y, bool Left)
  {

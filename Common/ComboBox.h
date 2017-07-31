@@ -31,6 +31,7 @@ public:
 
 	virtual void mousePressed(int x, int y, bool left);
 
+	virtual void addControl(Control &control, int left, int top);
 
 	//
 	struct UpdateListener : public MouseListener {

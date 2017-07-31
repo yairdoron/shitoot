@@ -73,6 +73,9 @@ public:
 
 	virtual void setBorder(BorderType border);	// the sons will set it up
 	virtual void setLayer(unsigned int layer);
+
+	virtual void show();
+	virtual void hide();
 	
 };
 

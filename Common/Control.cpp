@@ -124,6 +124,9 @@ void Control::draw(Graphics & g, int left, int top, unsigned int layer) const
 
 }
 
+void Control::show() { _visible = true; }
+void Control::hide() { _visible = false; }
+
 
 
 

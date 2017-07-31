@@ -1,5 +1,6 @@
 #include "NumericBox.h"
 
+
 struct NumericBoxUpdateListener;
 
 NumericBox::NumericBox(int width, int min, int max) : Panel(1, width), _buttonMinus(1), _label(width - 2), _buttonPlus(1),
@@ -59,6 +60,7 @@ private:
 public:
 	NumericBoxUpdateListener(NumericBox &box) : myBox(box)
 	{}
+
 
 	void mousePressed(Button &button, int x, int y, bool isLeft)
 	{

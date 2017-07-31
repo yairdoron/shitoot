@@ -2,6 +2,7 @@
 
 Panel::Panel(int height, int width) : Control(height, width)
  {
+	setCanGetFocus(false);
 }
 
 void Panel::getAllControls(vector<Control*>* other_control_list)

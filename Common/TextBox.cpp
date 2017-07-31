@@ -85,7 +85,7 @@ void TextBox::keyDown(int keyCode, char character)
 		if (curCursorPos < getText().size())
 		{
 			string newText = getText();
-			newText = newText.substr(0, curCursorPos) + newText.substr(curCursorPos, newText.size() - curCursorPos);
+			newText = newText.substr(0, curCursorPos) + newText.substr(curCursorPos+1, newText.size() - curCursorPos);
 			setText(newText);
 		}
 	}

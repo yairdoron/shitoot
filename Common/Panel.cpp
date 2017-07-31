@@ -13,7 +13,7 @@ if (other_control_list != nullptr)
 	
 		}
 
-void Panel::draw(Graphics & g, int left, int top, unsigned int layer) const
+void Panel::draw(Graphics & g, int left, int top, size_t layer) const
  {
 	if (layer >= getLayer())
 	for (unsigned int i = 0; i<controls.size(); i++) controls[i]->draw(g, left + getLeft(), top + getTop(), layer);

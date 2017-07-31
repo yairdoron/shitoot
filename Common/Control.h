@@ -11,9 +11,9 @@ class Control
 
 private:
 
-	int left;
-	int top;
-	unsigned int layer;
+	int tleft;
+	int ttop;
+	size_t layer;
 	int _width;
 	int _height;
 	BorderType _border;
@@ -34,7 +34,7 @@ public:
 	
 	
 
-	void draw(Graphics& g, int x, int y, unsigned int layer) const;   //  V
+	virtual void draw(Graphics& g, int x, int y,size_t layer) const;  
 
 	virtual void mousePressed(int x, int y, bool isLeft) {};
 	virtual void keyDown(int keyCode, char charecter) {};
@@ -54,7 +54,7 @@ public:
 
 
 	
-	virtual unsigned int getLayer() const;
+	virtual size_t getLayer() const;
 	
 
 	virtual void getAllControls(vector<Control*>* controls) {};
@@ -72,7 +72,10 @@ public:
 	virtual bool isVisible() const;
 
 	virtual void setBorder(BorderType border);	// the sons will set it up
-	virtual void setLayer(unsigned int layer);
+	virtual void setLayer(size_t layer);
+
+	virtual void show();
+	virtual void hide();
 	
 };
 

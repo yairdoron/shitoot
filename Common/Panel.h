@@ -15,7 +15,7 @@ public:
 
 	virtual void getAllControls(vector<Control*>* controls);
 
-	virtual void draw(Graphics &g, int left, int top, unsigned int layer) const;
+	virtual void draw(Graphics &g, int left, int top, size_t layer) const;
 	virtual void mousePressed(int x, int y, bool Left);
 	virtual void keyDown(int keyCode, char character);
 

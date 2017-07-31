@@ -1,7 +1,8 @@
 #include "ComboBox.h"
 
 
-ComboBox::ComboBox(int width, vector<string> options) : Panel(getHeight(), width), btnValue(width) {}
+ComboBox::ComboBox(int width, vector<string> options) : Panel(options.size() , width), btnValue(width),
+panelOptions(options.size(), width), selectedIndex(0), options(options), listIndex(0), oldLayer(0), listBorder(BorderType::None) {}
 
 
 ComboBox::~ComboBox() {}

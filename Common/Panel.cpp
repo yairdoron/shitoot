@@ -8,15 +8,15 @@ void Panel::getAllControls(vector<Control*>* other_control_list)
  {
 if (other_control_list != nullptr)
 		 {
-		for (int i = 0; i<controls.size(); i++)	other_control_list->push_back(controls[i]);
+		for (unsigned int i = 0; i<controls.size(); i++)	other_control_list->push_back(controls[i]);
 		}
 	
 		}
 
-void Panel::draw(Graphics & g, int left, int top, unsigned int layer) const
+void Panel::draw(Graphics & g, int left, int top, size_t layer) const
  {
 	if (layer >= getLayer())
-	for (int i = 0; i<controls.size(); i++) controls[i]->draw(g, left + getLeft(), top + getTop(), layer);
+	for (unsigned int i = 0; i<controls.size(); i++) controls[i]->draw(g, left + getLeft(), top + getTop(), layer);
 	
 		Control::draw(g, left, top, layer);
 	}
@@ -31,7 +31,7 @@ void Panel::mousePressed(int x, int y, bool Left)
 			Control::setFocus(*this);
 			}
 		
-			for (int i = 0; i<controls.size(); i++)
+			for (unsigned int i = 0; i<controls.size(); i++)
 			 {
 			controls[i]->mousePressed(x - getLeft(), y - getTop(), Left);
 			}
@@ -41,7 +41,7 @@ void Panel::mousePressed(int x, int y, bool Left)
 void Panel::keyDown(int keyCode, char character)
  {
 	
-		for (int i = 0; i<controls.size(); i++)
+		for (unsigned int i = 0; i<controls.size(); i++)
 		 {
 		controls[i]->keyDown(keyCode, character);
 		}
@@ -57,7 +57,7 @@ void Panel::addControl(Control & control, int left, int top)
 void Panel::setForeground(Color color)
 {
 	Control::setForeground(color);
-	for (int i = 0; i<controls.size(); i++)
+	for (unsigned int i = 0; i<controls.size(); i++)
 	{
 		controls[i]->setForeground(color);
 	}
@@ -65,7 +65,7 @@ void Panel::setForeground(Color color)
 void Panel::setBackground(Color color)
 {
 	Control::setBackground(color);
-	for (int i = 0; i<controls.size(); i++)
+	for (unsigned int i = 0; i<controls.size(); i++)
 	{
 		controls[i]->setBackground(color);
 	}

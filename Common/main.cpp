@@ -20,13 +20,13 @@ int main()
 	Label1.setText("Name: ");
 
 	TextBox TextB(20);
-	TextB.setBorder(BorderType::Single);
+	TextB.setBorder(BorderType::Double);
 	
 
 	TextBox TextB2(25);
 
 
-	Panel main(5, 20);
+	Panel main(50, 40);
 
 	vector<string> options;
 	options.push_back("100");
@@ -34,12 +34,17 @@ int main()
 
 	CheckList checklist(x, x, options);
 
-	main.addControl(Label1, 1, 2);
+	main.addControl(Label1, 3, 2);
 
 	main.addControl(TextB, 25, 2);
 	main.addControl(TextB2, 25, 5);
 	main.addControl(checklist, 60, 30);
 	EventEngine engine;
+
+	main.setBackground(Color::Purple);
+
+
+	main.setForeground(Color::White);
 	engine.run(main);
 	return 1;
 }

@@ -51,10 +51,14 @@
     <ClCompile Include="NumericBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="CheckList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RadioList.cpp">
+=======
+    <ClCompile Include="MessageBox.cpp">
+>>>>>>> 769d604bfa05d7a1b66f19b759538bb5c76686d3
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,10 +99,12 @@
     <ClInclude Include="NumericBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+
     <ClInclude Include="CheckList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RadioList.h">
+
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -29,11 +29,7 @@ protected:
 
 public:
 
-	static Control* getFocus() { return NULL; };
-	static void setFocus(Control& control) {};
 	
-	
-
 	virtual void draw(Graphics& g, int x, int y,size_t layer) const;  
 
 	virtual void mousePressed(int x, int y, bool isLeft) {};
@@ -76,6 +72,12 @@ public:
 
 	virtual void show();
 	virtual void hide();
+
+	static Control* getFocus();
+
+	static void setFocus(Control &control);
+
+	static Control* focus;
 	
 };
 

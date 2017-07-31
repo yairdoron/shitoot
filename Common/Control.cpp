@@ -1,6 +1,6 @@
 #include "Control.h"
 
-
+Control* Control::focus = nullptr;
 
 Control::Control(int height, int width) :
 
@@ -127,6 +127,14 @@ void Control::draw(Graphics & g, int left, int top, size_t layer) const
 void Control::show() { _visible = true; }
 void Control::hide() { _visible = false; }
 
+Control* Control::getFocus()
+{
+	return focus;
+}
 
+void Control::setFocus(Control &control)
+{
+	focus = &control;
+}
 
 

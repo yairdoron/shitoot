@@ -118,6 +118,7 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageBox.cpp" />
     <ClCompile Include="NumericBox.cpp" />
     <ClCompile Include="Panel.cpp" />
     <ClCompile Include="RadioList.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="EventEngine.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Label.h" />
+    <ClInclude Include="MessageBox.h" />
     <ClInclude Include="NumericBox.h" />
     <ClInclude Include="Panel.h" />
     <ClInclude Include="RadioList.h" />

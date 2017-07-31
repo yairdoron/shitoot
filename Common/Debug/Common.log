@@ -1,4 +1,4 @@
-﻿  NumericBox.cpp
+
 c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): error C2259: 'NumericBoxUpdateListener': cannot instantiate abstract class
   c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): note: due to following members:
   c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(10): note: 'void MouseListener::mousePressed(Button &,int,int,bool)': is abstract

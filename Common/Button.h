@@ -20,6 +20,6 @@ class Button : public Label
 			Button(int width);
 			~Button();
 			
-				virtual void mousePressed(int x, int y, bool left);
+			virtual void mousePressed(int x, int y, bool left);
 			void addListener(struct MouseListener &listener);
 };

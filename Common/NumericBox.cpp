@@ -1,12 +1,39 @@
 #include "NumericBox.h"
+#include "Button.h"
 
+struct NumericBoxUpdateListener : public MouseListener
+{
 
+private:
+	NumericBox &myBox;
+
+public:
+	NumericBoxUpdateListener(NumericBox &box) : myBox(box)
+	{}
+
+	void mousePressed(Button &button, int x, int y, bool isLeft)
+	{
+
+		std::string buttonText = button.getText();
+		int value = myBox.getParam();
+		if (buttonText == "-")
+		{
+			value--;
+		}
+		if (buttonText == "+")
+		{
+			value++;
+		}
+		myBox.setParam(value);
+
+	}
+};
 
 NumericBox::NumericBox(int width, int min, int max) : Panel(1, width), _buttonMinus(1), _label(width - 2), _buttonPlus(1),
 	_val(min), _min(min), _max(max)
 {
 
-	auto updateListener = new NumericBoxUpdateListener(*this);
+	NumericBoxUpdateListener* updateListener = new NumericBoxUpdateListener(*this);
 
 	_buttonMinus.setText("-");
 	_buttonPlus.setText("+");
@@ -50,35 +77,6 @@ int NumericBox::getMax() const
 }
 
 
-struct NumericBoxUpdateListener : public MouseListener
-{
-
-private:
-	NumericBox &myBox;
-
-public:
-	NumericBoxUpdateListener(NumericBox &box) : myBox(box)
-	{}
-
-	void mousePressed(Button &button, int x, int y, bool isLeft)
-	{
-
-		std::string buttonText = button.getText();
-		int value = myBox.getParam();
-		if (buttonText == "-")
-		{
-			value--;
-		}
-		if (buttonText == "+")
-		{
-			value++;
-		}
-		myBox.setParam(value);
-
-	}
-};
-
-
 void NumericBox::addControl(Control & control, int left, int top)
 {
 	Panel::addControl(control, left, top);
@@ -86,7 +84,7 @@ void NumericBox::addControl(Control & control, int left, int top)
 
 void NumericBox::setLayer(size_t layer)
 {
-	for (auto c : _controls)
+	for (auto c : controls)
 	{
 		c->setLayer(layer);
 	}

@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+=======
+﻿  NumericBox.cpp
+c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(9): error C2027: use of undefined type 'NumericBoxUpdateListener'
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(3): note: see declaration of 'NumericBoxUpdateListener'
+  c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(3): note: see declaration of 'NumericBoxUpdateListener'
+c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(13): error C2664: 'void Button::addListener(MouseListener &)': cannot convert argument 1 from 'NumericBoxUpdateListener' to 'MouseListener &'
+c:\users\alisa\source\repos\shitoot\common\numericbox.cpp(14): error C2664: 'void Button::addListener(MouseListener &)': cannot convert argument 1 from 'NumericBoxUpdateListener' to 'MouseListener &'
+>>>>>>> 2accae011479e1ec3b7ef488a640f827605ab686

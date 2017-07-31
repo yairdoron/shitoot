@@ -2,7 +2,7 @@
 #include <string>
 #include "Panel.h"
 #include "Button.h"
-
+using namespace std;
 class ComboBox : public Panel
 {
 protected:
@@ -33,6 +33,8 @@ public:
 
 	virtual void addControl(Control &control, int left, int top);
 
+	virtual void keyDown(int key, char c);
+
 	//
 	struct UpdateListener : public MouseListener {
 		ComboBox &myBox;
@@ -57,10 +59,18 @@ public:
 		void mousePressed(Button &btn, int x, int y, bool left) {
 			if (myBox.panelOptions.isVisible()) {
 				myBox.panelOptions.show();
+				myBox.Panel::setBorder(myBox.listBorder);
+				myBox.btnValue.setBorder(BorderType::None);
+				myBox.oldLayer = myBox.getLayer();
+				myBox.setLayer(4);
 				setFocus(myBox);
 			}
 			else {
 				myBox.panelOptions.hide();
+				myBox.Panel::setBorder(BorderType::None);
+				myBox.btnValue.setBorder(myBox.listBorder);
+				myBox.oldLayer = 0;
+				myBox.setLayer(4);
 				setFocus(myBox);
 			}
 		}

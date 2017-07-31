@@ -4,8 +4,8 @@
 
 Control::Control(int height, int width) :
 
-	top(1),
-	left(2),
+	ttop(0),
+	tleft(0),
 	layer(0),
 	_width(width),
 	_height(height),
@@ -15,7 +15,7 @@ Control::Control(int height, int width) :
 	_visible(true),
 	_canGetFocus(false)
 	{
-	
+	setLayer(0);
 	}
 
 
@@ -38,22 +38,22 @@ void Control::setCanGetFocus(bool canGetFocus)
 
 int Control::getLeft() const
 {
-	return left;
+	return tleft;
 }
 
 void Control::setLeft(int left)
 {
-	Control::left = left;
+	tleft = left;
 }
 
 int Control::getTop() const
 {
-	return top;
+	return ttop;
 }
 
 void Control::setTop(int top)
 {
-	Control::top = top;
+	ttop = top;
 }
 
 int Control::getWidth() const
@@ -76,12 +76,12 @@ void Control::setHeight(int height)
 	_height = height;
 }
 
-unsigned int Control::getLayer() const
+size_t Control::getLayer() const
 {
 	return layer;
 }
 
-void Control::setLayer(unsigned int layerr)
+void Control::setLayer(size_t layerr)
 {
 	layer = layerr;
 }

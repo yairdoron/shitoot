@@ -2,7 +2,7 @@
 
 Label::Label(int width) : Control(TEXT_HEIGHT, width)
 {
-	
+	setCanGetFocus(false);
 }
 
 void Label::setText(string value)
@@ -17,8 +17,9 @@ string Label::getText() const
 
 void Label::draw(Graphics & g, int left, int top, size_t layer) const
 {
-
+	if (layer == getLayer() && isVisible())
+	{
 		Control::draw(g, left, top, layer);
-		g.write( left, top, _text);
-
+		g.write(getLeft() + left, getTop() + top, _text + string(getWidth() - _text.size(), ' '));
+	}
 }

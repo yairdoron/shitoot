@@ -5,7 +5,7 @@
 #include "Panel.h"
 
 
-class NumericBox : Panel
+class NumericBox : public Panel
 {
 private:
 	int _val;

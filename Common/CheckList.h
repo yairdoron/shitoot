@@ -7,17 +7,6 @@
 
 using namespace std;
 
-class CheckList;
-struct UpdateListener : public MouseListener
-{
-	UpdateListener(CheckList &box, size_t index);
-	void mousePressed(Button &b, int x, int y, bool isLeft);
-
-private:
-	CheckList &_box;
-	size_t _index;
-};
-
 class CheckList : public Panel
 {
 public:
@@ -31,12 +20,30 @@ public:
 	virtual void mousePressed(int x, int y, bool isLeft);
 	virtual void keyDown(int keyCode, char character);
 	virtual void setLayer(size_t layer);
-	virtual void alterSelectedIndex(size_t index);
+
 protected:
 	virtual void addControl(Control& control, int left, int top);
-	
+	virtual void alterSelectedIndex(size_t index);
+
+protected:
+	struct UpdateListener : public MouseListener
+	{
+		UpdateListener(CheckList &box, size_t index) : _box(box), _index(index)
+		{}
+
+		void mousePressed(Button &b, int x, int y, bool isLeft)
+		{
+			_box.alterSelectedIndex(_index);
+		}
+
+	private:
+		CheckList &_box;
+		size_t _index;
+	};
+
+protected:
 	vector<string> _options;
 	vector<size_t> _selectedIndices;
 	size_t _listIndex;
-	
+	static const size_t TEXT_HEIGHT = 1;
 };

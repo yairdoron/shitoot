@@ -1,17 +1,15 @@
 #include <algorithm>
 
 #include "Button.h"
-#include "Panel.h"
+
 #include "CheckList.h"
 
 using namespace std;
 
-
-CheckList::CheckList(int height, int width, vector<string> options):Panel(height, width), _options(options),
-_selectedIndices(), _listIndex(0)
+CheckList::CheckList(int height, int width, vector<string> options) :
+	Panel(height + 1, width),
+	_selectedIndices(), _options(options), _listIndex(0)
 {
-	
-
 	for (int i = 0; i < options.size(); i++)
 	{
 		Button* btnOption = new Button(width);
@@ -35,7 +33,6 @@ void CheckList::selectIndex(size_t index)
 	{
 		throw "invalid index";
 	}
-
 
 	if (find(_selectedIndices.begin(), _selectedIndices.end(), index) == _selectedIndices.end())
 	{
@@ -146,13 +143,3 @@ void CheckList::setLayer(size_t layer)
 	}
 	Panel::setLayer(layer);
 }
-
-UpdateListener::UpdateListener(CheckList &box, size_t index) : _box(box), _index(index)
-{}
-
-
-void UpdateListener::mousePressed(Button &b, int x, int y, bool isLeft)
-{
-	_box.alterSelectedIndex(_index);
-}
-
